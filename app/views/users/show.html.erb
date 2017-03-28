@@ -1,0 +1,29 @@
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+ 
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<hr>
+
+<h2>Posts</h2>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+<%= render @user.posts %>
+</table>
+<hr>
+
+<h2>Add a post:</h2>
+<%= render 'posts/form' %>
+
+<hr>
+
+<%= link_to 'Edit User', edit_user_path(@user) %> |
+<%= link_to 'Back List', users_path %>
